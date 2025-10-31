@@ -1,0 +1,67 @@
+.skills-container {
+  padding: 2rem;
+  background-color: #f8f4ef; /* Match the page style */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #84cce8; /* Match the color scheme */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-box {
+  background-color: #ffffff; /* White background for each box */
+  border: 2px solid #e6e2dd; /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skills-box h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ed749e; /* Video game-inspired color */
+  margin-bottom: 1rem;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  flex: 1;
+}
+
+.skill-bar {
+  background-color: #e6e2dd; /* Light background for the bar */
+  border-radius: 8px;
+  height: 20px;
+  width: 70%; /* Adjust width for better alignment */
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  background-color: #84cce8; /* Progress bar color */
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.3s ease;
+}
+
+.skill-percentage {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+  margin-left: 0.5rem;
+}

@@ -1,0 +1,100 @@
+body {
+    font-family: 'Lusitana', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Patrick Hand', cursive;
+}
+
+.journal-container {
+    min-height: 100vh; 
+    background-color: #fdf6f0; 
+    padding: 2rem; 
+    position: relative;
+    text-align: center; 
+}
+
+.polaroids {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.polaroid {
+    position: absolute;
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    transform: rotate(calc(-10deg + 20deg * var(--random-rotation))); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.polaroid:nth-child(1) {
+    top: 10%;
+    left: 20%;
+}
+
+.polaroid:nth-child(2) {
+    top: 50%;
+    left: 60%;
+}
+
+.polaroid:nth-child(3) {
+    top: 30%;
+    left: 40%;
+}
+
+.polaroid:nth-child(4) {
+    top: 60%;
+    left: 10%;
+}
+
+.polaroid:nth-child(5) {
+    top: 20%;
+    left: 80%;
+}
+
+.extra-item-container {
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.extra-item {
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extra-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.extra-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+/* NIGHT MODE 🌙 */
+.night-mode {
+  background-color: #111; 
+  color: #fff;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.night-mode .extra-label {
+  color: #fff;
+}
+
+.night-mode .polaroid,
+.night-mode .extra-item {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
