@@ -36,11 +36,6 @@ const Contact = ({ isNight }) => {
           <span>GitHub</span>
         </a>
       </div>
-
-      <div className="signature">
-        <p>— End of JenOS Journal —</p>
-        <small>© {new Date().getFullYear()} Jennifer Okeke</small>
-      </div>
     </section>
   );
 };

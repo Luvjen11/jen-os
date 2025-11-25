@@ -1,0 +1,123 @@
+.about-hero {
+  padding: 4rem 2rem 6rem 2rem;
+  background-color: #fdf6f0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Left: Polaroid Image */
+.about-hero-image {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero-image img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.about-hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Right: Professional Text */
+.about-hero-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.about-hero-name {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.about-hero-title {
+  font-size: 1.3rem;
+  color: #84cce8;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  letter-spacing: 0.5px;
+}
+
+.about-hero-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-hero-description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin: 0;
+  font-family: 'Lusitana', serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 3rem 1.5rem 5rem 1.5rem;
+  }
+
+  .about-hero-container {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .about-hero-name {
+    font-size: 2.5rem;
+  }
+
+  .about-hero-title {
+    font-size: 1.1rem;
+  }
+
+  .about-hero-description p {
+    font-size: 1rem;
+  }
+
+  .about-hero-image img {
+    max-width: 280px;
+  }
+}
+
+/* Night Mode Support */
+.about-hero.night-mode {
+  background-color: #1f2937;
+}
+
+.about-hero.night-mode .about-hero-name {
+  color: #f9fafb;
+}
+
+.about-hero.night-mode .about-hero-title {
+  color: #84cce8;
+}
+
+.about-hero.night-mode .about-hero-description p {
+  color: #d1d5db;
+}
+

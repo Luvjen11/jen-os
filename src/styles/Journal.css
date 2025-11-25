@@ -7,9 +7,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .journal-container {
-    min-height: 100vh; 
+    min-height: 120vh; 
     background-color: #fdf6f0; 
-    padding: 2rem; 
+    padding: 6rem 2rem; 
     position: relative;
     text-align: center; 
 }
@@ -81,6 +81,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     color: #333;
     margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .journal-container {
+    padding: 4rem 1.5rem;
+  }
 }
 
 /* NIGHT MODE 🌙 */

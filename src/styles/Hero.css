@@ -59,10 +59,50 @@
   filter: brightness(0.95);
 }
 
+.hero-signature {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-signature p {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: #84cce8;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-signature small {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.night .hero-signature {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.night .hero-signature p {
+  color: #84cce8;
+}
+
+.night .hero-signature small {
+  color: rgba(255, 255, 255, 0.9);
+}
 
 @media (max-width: 768px) {
   .hero {
     aspect-ratio: auto;
     min-height: 70vh; 
+  }
+
+  .hero-signature {
+    bottom: 1.5rem;
+    font-size: 0.85rem;
   }
 }

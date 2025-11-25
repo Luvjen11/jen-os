@@ -5,10 +5,10 @@ import '../styles/Window.css';
 import About from './windows/AboutContent'
 import Project from './windows/Projects'
 import Skill from './windows/Skills'
-import Service from './windows/Services'
+import Selfsaga from './windows/Selfsaga'
 import Hobby from './windows/Hobbies'
 import Cv from './windows/Cv'
-import Github from './windows/Github'
+import JenOSUpdates from './windows/JenOSUpdates'
 
 export const Window = (
     { id, title, isOpen, onClose }
@@ -24,14 +24,14 @@ export const Window = (
                 return <Project/>;
             case "skills":
                 return <Skill/>;
-            case "services":
-                return <Service/>;
+            case "selfsaga":
+                return <Selfsaga/>;
             case "hobbies":
                 return <Hobby/>;
             case "cv":
                 return <Cv/>;
-            case "github":
-                return <Github/>;
+            case "jenosupdates":
+                return <JenOSUpdates/>;
             default:
                 return null;
         }

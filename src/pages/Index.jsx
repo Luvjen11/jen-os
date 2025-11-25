@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Journal from "../components/Journal.jsx";
 import Hero from "../components/Hero.jsx";
 import Contact from "../components/Contact.jsx";
+import AboutHero from "../components/About-Hero.jsx";
 
 const Index = () => {
 
@@ -9,9 +10,11 @@ const Index = () => {
 
     return (
         <div>
-            <Hero isNight={isNight} setIsNight={setIsNight} />
+            <AboutHero />
+            {/* <Hero isNight={isNight} setIsNight={setIsNight} /> */}
             <Journal isNight={isNight}/>
             <Contact isNight={isNight}/>
+            <Hero isNight={isNight} setIsNight={setIsNight} />
         </div>
     );
 

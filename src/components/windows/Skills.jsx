@@ -2,106 +2,79 @@ import React from 'react';
 import '../../styles/Skills.css';
 
 const Skills = () => {
+  const technicalSkills = [
+    { name: 'Java (Spring Boot)', logo: '/icons/java.png' },
+    { name: 'React', logo: '/icons/react.png' },
+    { name: 'MySQL', logo: '/icons/sql.png' },
+    { name: 'HTML5', logo: '/icons/html5.png' },
+    { name: 'CSS3', logo: '/icons/css3.png' },
+    { name: 'JavaScript', logo: '/icons/js.png' },
+    { name: 'GitHub', logo: '/icons/github.png' },
+    { name: 'Git', logo: '/icons/git.png' },
+  ];
+
+  const softSkills = [
+    'Problem Solving',
+    'Teamwork',
+    'Adaptability',
+  ];
+
+  const languageSkills = [
+    'Italian',
+    'English',
+    'Igbo',
+  ];
+
   return (
     <div className="skills-container">
       <h2 className="skills-title">Skills</h2>
 
       {/* Technical Skills */}
-      <div className="skills-box">
-        <h3>Technical Skills</h3>
-        <div className="skill-card">
-          <p>Java</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '80%' }}></div>
-          </div>
-          <span className="skill-percentage">80%</span>
-        </div>
-        <div className="skill-card">
-          <p>React</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '65%' }}></div>
-          </div>
-          <span className="skill-percentage">65%</span>
-        </div>
-        <div className="skill-card">
-          <p>MySQL</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '75%' }}></div>
-          </div>
-          <span className="skill-percentage">75%</span>
-        </div>
-        <div className="skill-card">
-          <p>HTML</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '100%' }}></div>
-          </div>
-          <span className="skill-percentage">100%</span>
-        </div>
-        <div className="skill-card">
-          <p>CSS</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '70%' }}></div>
-          </div>
-          <span className="skill-percentage">70%</span>
-        </div>
-        <div className="skill-card">
-          <p>Javascript</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '70%' }}></div>
-          </div>
-          <span className="skill-percentage">70%</span>
+      <div className="skills-section">
+        <h3 className="skills-section-title">Technical Skills</h3>
+        <div className="skills-grid">
+          {technicalSkills.map((skill, index) => (
+            <div key={index} className="skill-card">
+              <div className="skill-logo">
+                <img 
+                  src={skill.logo} 
+                  alt={skill.name}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="skill-logo-fallback" style={{ display: 'none' }}>
+                  {skill.name.charAt(0)}
+                </div>
+              </div>
+              <p className="skill-name">{skill.name}</p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Soft Skills */}
-      <div className="skills-box">
-        <h3>Soft Skills</h3>
-        <div className="skill-card">
-          <p>Problem Solving</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '85%' }}></div>
-          </div>
-          <span className="skill-percentage">85%</span>
-        </div>
-        <div className="skill-card">
-          <p>Teamwork</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '90%' }}></div>
-          </div>
-          <span className="skill-percentage">90%</span>
-        </div>
-        <div className="skill-card">
-          <p>Adaptability</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '80%' }}></div>
-          </div>
-          <span className="skill-percentage">80%</span>
+      <div className="skills-section">
+        <h3 className="skills-section-title">Soft Skills</h3>
+        <div className="skills-text-list">
+          {softSkills.map((skill, index) => (
+            <span key={index} className="skill-text-item">
+              {skill}
+            </span>
+          ))}
         </div>
       </div>
 
       {/* Language Skills */}
-      <div className="skills-box">
-        <h3>Language Skills</h3>
-        <div className="skill-card">
-          <p>Italian</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '100%' }}></div>
-          </div>
-          <span className="skill-percentage">100%</span>
-        </div>
-        <div className="skill-card">
-          <p>English</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '95%' }}></div>
-          </div>
-          <span className="skill-percentage">95%</span>
-        </div>
-        <div className="skill-card">
-          <p>Igbo</p>
-          <div className="skill-bar">
-            <div className="skill-progress" style={{ width: '50%' }}></div>
-          </div>
-          <span className="skill-percentage">50%</span>
+      <div className="skills-section">
+        <h3 className="skills-section-title">Language Skills</h3>
+        <div className="skills-text-list">
+          {languageSkills.map((skill, index) => (
+            <span key={index} className="skill-text-item">
+              {skill}
+            </span>
+          ))}
         </div>
       </div>
     </div>

@@ -8,10 +8,10 @@ export const Journal = ({ isNight }) => {
         {id: "about", title: "About me", isOpen: false},
         {id: "projects", title: "Projects", isOpen: false},
         {id: "skills", title: "Skills", isOpen: false},
-        {id: "services", title: "Services", isOpen: false},
+        {id: "selfsaga", title: "Selfsaga", isOpen: false},
         {id: "hobbies", title: "Hobbies", isOpen: false},
         {id: "cv", title: "Curriculum Vitae", isOpen: false},
-        {id: "github", title: "GitHub Profile", isOpen: false},
+        {id: "jenosupdates", title: "JenOS.txt", isOpen: false},
         {id: "quote1", title: "Quote 1", isOpen: false},
     ]);
 
@@ -19,13 +19,13 @@ export const Journal = ({ isNight }) => {
         {id: "about", src: "/about-me.png", alt: "about me", label: "About Me"},
         {id: "projects", src: "/projects.png", alt: "projects", label: "Projects"},
         {id: "skills", src: "/skills.png", alt: "skills", label: "Skills"},
-        {id: "services", src: "/services.png", alt: "services", label: "Services"},
+        {id: "selfsaga", src: "/selfsaga.png", alt: "selfsaga", label: "Selfsaga"},
         {id: "hobbies", src: "/hobbies.png", alt: "hobbies", label: "Hobbies"},
     ]
 
     const extras = [
         {id: "cv", src: "/file-icon.png ", alt: "cv", label: "CV", top: '10%', left: '70%', size: 50},
-        {id: "github", src: "/github.png", alt: "github", label: "GitHub", top: '40%', left: '10%', size: 80},
+        {id: "jenosupdates", src: "/journal.png", alt: "jenosupdates", label: "JenOS Updates", top: '40%', left: '10%', size: 80},
         {id: "quote1", h3: "Quote 1", label: "there is no future for the past. What’s done is done—now let’s make the best of what we have here and now.", top: '90%', left: '90%', size: 60},
     ]
 

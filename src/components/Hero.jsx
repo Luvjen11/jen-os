@@ -38,6 +38,11 @@ const Hero = ({ isNight, setIsNight }) => {
           {isNight ? "☀️ Day Mode" : "🌙 Night Mode"}
         </button>
       </div>
+
+      <div className="hero-signature">
+        <p>— End of JenOS Journal —</p>
+        <small>© {new Date().getFullYear()} Jennifer Okeke</small>
+      </div>
     </section>
   );
 };

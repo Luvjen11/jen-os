@@ -1,0 +1,126 @@
+.selfsaga-container {
+  padding: 2rem;
+  background-color: #f8f4ef;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.selfsaga-content {
+  color: #333;
+  line-height: 1.7;
+  font-family: 'Lusitana', serif;
+}
+
+.selfsaga-h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0 0 1.5rem 0;
+  font-family: 'Patrick Hand', cursive;
+  border-bottom: 3px solid #84cce8;
+  padding-bottom: 0.5rem;
+}
+
+.selfsaga-h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ed749e;
+  margin: 2rem 0 1rem 0;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.selfsaga-p {
+  font-size: 1rem;
+  color: #4b5563;
+  margin: 0 0 1rem 0;
+}
+
+.selfsaga-blockquote {
+  border-left: 4px solid #84cce8;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #555;
+  background-color: #f0f9ff;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+}
+
+.selfsaga-ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  color: #4b5563;
+}
+
+.selfsaga-ul li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.selfsaga-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.selfsaga-check-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 0.75rem 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.selfsaga-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #84cce8;
+  border-radius: 3px;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 0.85rem;
+  color: #84cce8;
+  background-color: #fff;
+}
+
+.selfsaga-check-item.checked .selfsaga-checkbox {
+  background-color: #84cce8;
+  color: #fff;
+  border-color: #84cce8;
+}
+
+.selfsaga-link {
+  color: #84cce8;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.selfsaga-link:hover {
+  border-bottom-color: #84cce8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .selfsaga-container {
+    padding: 1.5rem;
+  }
+
+  .selfsaga-h1 {
+    font-size: 2rem;
+  }
+
+  .selfsaga-h2 {
+    font-size: 1.5rem;
+  }
+
+  .selfsaga-p,
+  .selfsaga-ul li {
+    font-size: 0.95rem;
+  }
+}
