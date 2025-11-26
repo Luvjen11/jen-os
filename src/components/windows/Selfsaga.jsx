@@ -1,9 +1,9 @@
 import React from "react";
 import "../../styles/Selfsaga.css";
 
-const Selfsaga = () => {
+const Selfsaga = ({ isNight }) => {
   return (
-    <div className="selfsaga-container">
+    <div className={`selfsaga-container ${isNight ? "night-mode" : ""}`}>
       <div className="selfsaga-content">
         <h1 className="selfsaga-h1">SelfSaga</h1>
         

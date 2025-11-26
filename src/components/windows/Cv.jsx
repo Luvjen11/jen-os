@@ -2,9 +2,9 @@ import React from 'react';
 import '../../styles/CV.css';
 import { Download } from 'lucide-react';
 
-const Cv = () => {
+const Cv = ({ isNight }) => {
   return (
-    <div className="cv-container">
+    <div className={`cv-container ${isNight ? "night-mode" : ""}`}>
       <h2 className="cv-title">@jennifer-cv</h2>
       <p className="cv-intro">
         A little peek into my professional world

@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../styles/AboutContent.css';
 
-const AboutContent = () => {
+const AboutContent = ({ isNight }) => {
   return (
-    <div className="about-content">
+    <div className={`about-content ${isNight ? "night-mode" : ""}`}>
         <div className='about-info'>
             <div className="about-image">
                 <img src="/jen.png" alt="A photo of me" />

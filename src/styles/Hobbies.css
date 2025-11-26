@@ -112,3 +112,45 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Night Mode */
+.hobbies-container.night-mode {
+  background-color: #000;
+}
+
+.hobbies-container.night-mode .hobbies-title {
+  color: #84cce8;
+}
+
+.hobbies-container.night-mode .hobby-card {
+  background-color: #111;
+  border-color: #333;
+}
+
+.hobbies-container.night-mode .hobby-card:hover {
+  box-shadow: 0 6px 14px rgba(132, 204, 232, 0.3);
+}
+
+.hobbies-container.night-mode .hobby-info h3 {
+  color: #ed749e;
+}
+
+.hobbies-container.night-mode .hobby-info p {
+  color: #d1d5db;
+}
+
+.hobbies-container.night-mode .xp-section {
+  color: #d1d5db;
+}
+
+.hobbies-container.night-mode .level {
+  color: #84cce8;
+}
+
+.hobbies-container.night-mode .xp-bar {
+  background-color: #222;
+}
+
+.hobbies-container.night-mode .xp-text {
+  color: #9ca3af;
+}

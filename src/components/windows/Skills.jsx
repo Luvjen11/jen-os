@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/Skills.css';
 
-const Skills = () => {
+const Skills = ({ isNight }) => {
   const technicalSkills = [
     { name: 'Java (Spring Boot)', logo: '/icons/java.png' },
     { name: 'React', logo: '/icons/react.png' },
@@ -26,7 +26,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="skills-container">
+    <div className={`skills-container ${isNight ? "night-mode" : ""}`}>
       <h2 className="skills-title">Skills</h2>
 
       {/* Technical Skills */}

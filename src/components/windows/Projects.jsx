@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../styles/Projects.css';
 
-const Projects = () => {
+const Projects = ({ isNight }) => {
   return (
-    <div className="project-container">
+    <div className={`project-container ${isNight ? "night-mode" : ""}`}>
       <div className="project-card">
         <img src="/akukonkendu.png" alt="Projects Icon" />
         <div className="project-details">

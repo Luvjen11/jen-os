@@ -154,3 +154,42 @@
     padding: 0.4rem 1rem;
   }
 }
+
+/* Night Mode */
+.skills-container.night-mode {
+  background-color: #000;
+}
+
+.skills-container.night-mode .skills-title {
+  color: #84cce8;
+}
+
+.skills-container.night-mode .skills-section-title {
+  color: #ed749e;
+}
+
+.skills-container.night-mode .skill-card {
+  background-color: #111;
+  border-color: #333;
+}
+
+.skills-container.night-mode .skill-card:hover {
+  border-color: #84cce8;
+  box-shadow: 0 8px 20px rgba(132, 204, 232, 0.3);
+}
+
+.skills-container.night-mode .skill-name {
+  color: #f9fafb;
+}
+
+.skills-container.night-mode .skill-text-item {
+  background-color: #111;
+  border-color: #333;
+  color: #d1d5db;
+}
+
+.skills-container.night-mode .skill-text-item:hover {
+  border-color: #84cce8;
+  color: #84cce8;
+  box-shadow: 0 4px 10px rgba(132, 204, 232, 0.3);
+}

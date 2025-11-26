@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/Github.css';
 
-const Github = () => {
+const JenOSUpdates = ({ isNight }) => {
   const [repos, setRepos] = useState([]);
   const username = 'luvjen11';
 
@@ -13,7 +13,7 @@ const Github = () => {
   }, []);
 
   return (
-    <div className="github-window">
+    <div className={`github-window ${isNight ? "night-mode" : ""}`}>
       <h3 className="github-title">My Pinned Projects</h3>
       <p className="github-desc">
         A peek at some of my latest work and side projects.
@@ -57,4 +57,4 @@ const Github = () => {
   );
 };
 
-export default Github;
+export default JenOSUpdates;

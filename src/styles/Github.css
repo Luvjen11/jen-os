@@ -73,4 +73,41 @@ button {
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(237, 116, 158, 0.3);
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+/* Night Mode */
+.github-window.night-mode {
+  background-color: #000;
+}
+
+.github-window.night-mode .github-title {
+  color: #84cce8;
+}
+
+.github-window.night-mode .github-desc {
+  color: #d1d5db;
+}
+
+.github-window.night-mode .repo-card {
+  background: #111;
+  border-color: #333;
+  color: #d1d5db;
+}
+
+.github-window.night-mode .repo-card:hover {
+  box-shadow: 0 6px 15px rgba(132, 204, 232, 0.3);
+}
+
+.github-window.night-mode .repo-card h4 {
+  color: #ed749e;
+}
+
+.github-window.night-mode .repo-card p {
+  color: #d1d5db;
+}
+
+.github-window.night-mode .repo-card span {
+  color: #84cce8;
 }

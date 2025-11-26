@@ -97,3 +97,144 @@ a {
   transform: translateY(0); 
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); 
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-container {
+    padding: 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .project-card {
+    flex-direction: column;
+    gap: 1.75rem;
+    padding: 1.25rem;
+  }
+
+  .project-card:hover {
+    transform: scale(1.02);
+  }
+
+  .project-card img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-details {
+    gap: 0.75rem;
+  }
+
+  .project-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-details p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .technologies {
+    margin-top: 0.75rem;
+  }
+
+  .technologies h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-buttons {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .project-buttons button {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-container {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .project-details {
+    gap: 0.65rem;
+  }
+
+  .project-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-details p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .technologies {
+    margin-top: 0.5rem;
+  }
+
+  .technologies h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .technologies p {
+    font-size: 0.9rem;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.65rem;
+    margin-top: 0.5rem;
+  }
+
+  .project-buttons button {
+    width: 100%;
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Night Mode */
+.project-container.night-mode {
+  background-color: transparent;
+}
+
+.project-container.night-mode .project-card {
+  background-color: #000;
+  border-color: #333;
+}
+
+.project-container.night-mode .project-details h3 {
+  color: #f7c4db;
+}
+
+.project-container.night-mode .project-details p {
+  color: #d1d5db;
+}
+
+.project-container.night-mode .technologies h4 {
+  color: #84cce8;
+}
+
+.project-container.night-mode .technologies p {
+  color: #d1d5db;
+}
+
+.project-container.night-mode .project-card:hover {
+  box-shadow: 0 6px 15px rgba(132, 204, 232, 0.3);
+}

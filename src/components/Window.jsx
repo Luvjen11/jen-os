@@ -11,7 +11,7 @@ import Cv from './windows/Cv'
 import JenOSUpdates from './windows/JenOSUpdates'
 
 export const Window = (
-    { id, title, isOpen, onClose }
+    { id, title, isOpen, onClose, isNight }
 ) => {
 
     if (!isOpen) return null;
@@ -19,19 +19,19 @@ export const Window = (
     const renderContent = () => {
         switch (id) {
             case "about":
-                return <About/>;
+                return <About isNight={isNight}/>;
             case "projects":
-                return <Project/>;
+                return <Project isNight={isNight}/>;
             case "skills":
-                return <Skill/>;
+                return <Skill isNight={isNight}/>;
             case "selfsaga":
-                return <Selfsaga/>;
+                return <Selfsaga isNight={isNight}/>;
             case "hobbies":
-                return <Hobby/>;
+                return <Hobby isNight={isNight}/>;
             case "cv":
-                return <Cv/>;
+                return <Cv isNight={isNight}/>;
             case "jenosupdates":
-                return <JenOSUpdates/>;
+                return <JenOSUpdates isNight={isNight}/>;
             default:
                 return null;
         }
@@ -39,7 +39,7 @@ export const Window = (
 
     return (
 
-        <div className="window-container">
+        <div className={`window-container ${isNight ? "night-mode" : ""}`}>
             <div className="window-card">
                 <div className="window-header">
                     <div className="window-title">{title}</div>

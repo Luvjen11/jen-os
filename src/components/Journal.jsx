@@ -64,7 +64,7 @@ export const Journal = ({ isNight }) => {
                     {extras.map(item => (
                         <div
                             key={item.id}
-                            className="extra-item-container"
+                            className={`extra-item-container ${item.id === 'quote1' ? 'quote-container' : ''}`}
                             style={{
                                 position: 'absolute',
                                 top: item.top,
@@ -72,17 +72,19 @@ export const Journal = ({ isNight }) => {
                                 textAlign: 'center',
                             }}
                         >
-                            <img
-                                src={item.src}
-                                alt={item.alt}
-                                label={item.label}
-                                className="extra-item"
-                                style={{
-                                    width: `${item.size}px`,
-                                    cursor: 'pointer',
-                                }}
-                                onClick={() => openPolaroid(item.id)}
-                            />
+                            {item.src && (
+                                <img
+                                    src={item.src}
+                                    alt={item.alt}
+                                    label={item.label}
+                                    className="extra-item"
+                                    style={{
+                                        width: `${item.size}px`,
+                                        cursor: 'pointer',
+                                    }}
+                                    onClick={() => openPolaroid(item.id)}
+                                />
+                            )}
                             <h3 className="extra-label">{item.label}</h3>
                 </div>
                 ))}
@@ -96,6 +98,7 @@ export const Journal = ({ isNight }) => {
                         title={win.title}
                         isOpen={win.isOpen}
                         onClose={() => closePolaroid(win.id)}
+                        isNight={isNight}
                     />
                 )
             )}

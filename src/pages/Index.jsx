@@ -10,7 +10,7 @@ const Index = () => {
 
     return (
         <div>
-            <AboutHero />
+            <AboutHero isNight={isNight} />
             {/* <Hero isNight={isNight} setIsNight={setIsNight} /> */}
             <Journal isNight={isNight}/>
             <Contact isNight={isNight}/>

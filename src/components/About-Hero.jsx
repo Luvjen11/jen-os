@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/About-Hero.css';
 
-const AboutHero = () => {
+const AboutHero = ({ isNight }) => {
   return (
-    <section className="about-hero">
+    <section className={`about-hero ${isNight ? "night-mode" : ""}`}>
       <div className="about-hero-container">
         {/* Left: Polaroid Image */}
         <div className="about-hero-image">

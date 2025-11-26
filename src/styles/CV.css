@@ -71,3 +71,26 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Night Mode */
+.cv-container.night-mode {
+  background-color: #000;
+  color: #d1d5db;
+}
+
+.cv-container.night-mode .cv-title {
+  color: #84cce8;
+}
+
+.cv-container.night-mode .cv-intro {
+  color: #d1d5db;
+}
+
+.cv-container.night-mode .cv-frame {
+  background: #111;
+  border-color: #333;
+}
+
+.cv-container.night-mode .cv-frame:hover {
+  box-shadow: 0 6px 15px rgba(132, 204, 232, 0.3);
+}

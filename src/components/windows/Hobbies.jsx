@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/Hobbies.css';
 
-const Hobbies = () => {
+const Hobbies = ({ isNight }) => {
   const hobbies = [
     {
       id: 1,
@@ -46,7 +46,7 @@ const Hobbies = () => {
   ];
 
   return (
-    <div className="hobbies-container">
+    <div className={`hobbies-container ${isNight ? "night-mode" : ""}`}>
       <h2 className="hobbies-title">My Offline Quests</h2>
       <div className="hobbies-list">
         {hobbies.map(hobby => (

@@ -5,6 +5,7 @@
     align-items: flex-start;
     justify-content: center;
     z-index: 1000;
+    padding: 0;
 }
 
 .window-card {
@@ -59,5 +60,105 @@
 
 h3 {
   color: black;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .window-container {
+    padding: 0.5rem;
+    align-items: center;
+  }
+
+  .window-card {
+    margin-top: 0;
+    width: 100%;
+    max-width: 100%;
+    border-width: 4px;
+    border-radius: 20px;
+  }
+
+  .window-header {
+    padding: 8px 10px;
+  }
+
+  .window-title {
+    font-size: 14px;
+  }
+
+  .window-content {
+    padding: 12px;
+    max-height: 75vh;
+  }
+
+  .ctrl-btn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .ctrl-btn h3 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .window-container {
+    padding: 0.25rem;
+  }
+
+  .window-card {
+    border-width: 3px;
+    border-radius: 15px;
+  }
+
+  .window-header {
+    padding: 6px 8px;
+  }
+
+  .window-title {
+    font-size: 13px;
+  }
+
+  .window-content {
+    padding: 10px;
+    max-height: 80vh;
+  }
+
+  .ctrl-btn {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ctrl-btn h3 {
+    font-size: 11px;
+  }
+}
+
+/* Night Mode */
+.window-container.night-mode .window-card {
+  background: #000;
+  border-color: #333;
+}
+
+.window-container.night-mode .window-header {
+  background: #111;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.window-container.night-mode .window-title {
+  color: #f9fafb;
+}
+
+.window-container.night-mode .ctrl-btn {
+  background: #222;
+  border-color: #333;
+}
+
+.window-container.night-mode .ctrl-btn h3 {
+  color: #f9fafb;
+}
+
+.window-container.night-mode .ctrl-btn.close {
+  background: #7f1d1d;
+  border-color: #991b1b;
 }
 
