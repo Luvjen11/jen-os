@@ -1,0 +1,243 @@
+.jenos-updates-window {
+  padding: 2rem;
+  background-color: #f8f4ef;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.updates-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.updates-loading,
+.updates-error {
+  text-align: center;
+  padding: 3rem;
+  color: #4b5563;
+}
+
+.updates-empty {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+  font-style: italic;
+}
+
+.updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.update-card {
+  background-color: #fff;
+  border: 2px solid #e6e2dd;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.update-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.update-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e6e2dd;
+}
+
+.update-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #84cce8, #ed749e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.author-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.update-tag {
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #f7c4db;
+  color: #ed749e;
+}
+
+.tag-jenos-update,
+.tag-jenos-os-update {
+  background-color: #f7c4db;
+  color: #ed749e;
+}
+
+.tag-life-update {
+  background-color: #ffe6e6;
+  color: #d75b87;
+}
+
+.tag-other {
+  background-color: #e0f2fe;
+  color: #84cce8;
+}
+
+.update-content {
+  margin-bottom: 1rem;
+}
+
+.update-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0 0 1rem 0;
+  font-family: 'Lusitana', serif;
+}
+
+.update-image {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e6e2dd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.update-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e6e2dd;
+}
+
+.update-date {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jenos-updates-window {
+    padding: 1.5rem;
+  }
+
+  .updates-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .updates-list {
+    gap: 1.5rem;
+  }
+
+  .update-card {
+    padding: 1.25rem;
+  }
+
+  .update-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .update-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jenos-updates-window {
+    padding: 1rem;
+  }
+
+  .updates-title {
+    font-size: 1.75rem;
+  }
+
+  .update-card {
+    padding: 1rem;
+  }
+
+  .update-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Night Mode */
+.jenos-updates-window.night-mode {
+  background-color: #000;
+}
+
+.jenos-updates-window.night-mode .updates-title {
+  color: #f9fafb;
+}
+
+.jenos-updates-window.night-mode .updates-loading,
+.jenos-updates-window.night-mode .updates-empty {
+  color: #d1d5db;
+}
+
+.jenos-updates-window.night-mode .update-card {
+  background-color: #111;
+  border-color: #333;
+}
+
+.jenos-updates-window.night-mode .update-card:hover {
+  box-shadow: 0 6px 20px rgba(132, 204, 232, 0.2);
+}
+
+.jenos-updates-window.night-mode .update-header {
+  border-bottom-color: #333;
+}
+
+.jenos-updates-window.night-mode .author-name {
+  color: #f9fafb;
+}
+
+.jenos-updates-window.night-mode .update-text {
+  color: #d1d5db;
+}
+
+.jenos-updates-window.night-mode .update-image {
+  border-color: #333;
+}
+
+.jenos-updates-window.night-mode .update-footer {
+  border-top-color: #333;
+}
+
+.jenos-updates-window.night-mode .update-date {
+  color: #9ca3af;
+}
