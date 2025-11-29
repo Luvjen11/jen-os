@@ -5,6 +5,8 @@ const JenOSUpdates = ({ isNight }) => {
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortOrder, setSortOrder] = useState('newest'); 
 
   const API_URL = "/api/dev-notes";
 
@@ -46,6 +48,23 @@ const JenOSUpdates = ({ isNight }) => {
     });
   };
 
+  // Get unique categories from notes
+  const categories = ['all', ...new Set(notes.map(note => note.category || 'Other').filter(Boolean))];
+
+  // Filter and sort notes
+  const filteredAndSortedNotes = notes
+    .filter(note => {
+      if (selectedCategory === 'all') return true;
+      return (note.category || 'Other') === selectedCategory;
+    })
+    .sort((a, b) => {
+      const dateA = new Date(a.date || 0);
+      const dateB = new Date(b.date || 0);
+      return sortOrder === 'newest' 
+        ? dateB - dateA 
+        : dateA - dateB;
+    });
+
   if (loading) {
     return (
       <div className={`jenos-updates-window ${isNight ? "night-mode" : ""}`}>
@@ -67,18 +86,48 @@ const JenOSUpdates = ({ isNight }) => {
 
   return (
     <div className={`jenos-updates-window ${isNight ? "night-mode" : ""}`}>
-      <h2 className="updates-title">JENOSUPDATES</h2>
+      <h2 className="updates-title">JENOS UPDATES</h2>
+      
+      {/* Filters and Sort */}
+      <div className="updates-controls">
+        <div className="category-filters">
+          {categories.map(category => (
+            <button
+              key={category}
+              className={`category-filter ${selectedCategory === category ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        
+        <div className="sort-controls">
+          <button
+            className={`sort-btn ${sortOrder === 'newest' ? 'active' : ''}`}
+            onClick={() => setSortOrder('newest')}
+          >
+            Newest
+          </button>
+          <button
+            className={`sort-btn ${sortOrder === 'oldest' ? 'active' : ''}`}
+            onClick={() => setSortOrder('oldest')}
+          >
+            Oldest
+          </button>
+        </div>
+      </div>
       
       <div className="updates-list">
-        {notes.length === 0 ? (
-          <div className="updates-empty">No updates yet. Check back soon!</div>
+        {filteredAndSortedNotes.length === 0 ? (
+          <div className="updates-empty">No updates found. Try a different filter.</div>
         ) : (
-          notes.map(note => (
+          filteredAndSortedNotes.map(note => (
             <div key={note.id} className="update-card">
               <div className="update-header">
                 <div className="update-author">
-                  <div className="author-icon">@</div>
                   <span className="author-name">jen</span>
+                  
                 </div>
                 <span className={`update-tag tag-${note.category?.toLowerCase().replace(/\s+/g, '-') || 'other'}`}>
                   {note.category || 'UPDATE'}
@@ -86,6 +135,9 @@ const JenOSUpdates = ({ isNight }) => {
               </div>
               
               <div className="update-content">
+                {note.title && (
+                  <h3 className="update-title">{note.title}</h3>
+                )}
                 <p className="update-text">{note.content}</p>
                 
                 {note.imageUrl && (
