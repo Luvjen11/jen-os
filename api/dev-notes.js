@@ -1,3 +1,4 @@
+
 import { Client } from "@notionhq/client";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
@@ -6,14 +7,9 @@ export default async function handler(req, res) {
   try {
     const databaseId = process.env.NOTION_DATABASE_ID;
 
+    // TEMP: no sorts, keep it simple first
     const response = await notion.databases.query({
       database_id: databaseId,
-      sorts: [
-        {
-          property: "Date",
-          direction: "descending",
-        },
-      ],
     });
 
     const notes = response.results.map((page) => {
@@ -37,7 +33,14 @@ export default async function handler(req, res) {
     res.status(200).json(notes);
   } catch (error) {
     console.error("Notion API error:", error);
+
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.status(500).json({ error: "Failed to fetch Jen dev notes" });
+    res.status(500).json({
+      message: "Failed to fetch Jen dev notes",
+      // TEMP: expose error details so YOU can see what's wrong
+      error: error.message || null,
+      code: error.code || null,
+      details: error.body || null,
+    });
   }
 }
