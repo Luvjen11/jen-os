@@ -42,17 +42,21 @@ const Projects = ({ isNight }) => {
       <div className="project-card">
         <img src="/projects-icon.png" alt="Projects Icon" />
         <div className="project-details">
-          <h3>Project Name 3</h3>
+          <h3>Ntụgharị - Igbo Language Learning</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magnam cupiditate, hic natus iste provident odit, animi quia aperiam qui molestias rem ducimus dolorem eaque facilis necessitatibus earum at? Aspernatur.
+            An interactive web application designed to help diaspora Igbo speakers bridge the gap 
+            between understanding and actively speaking their heritage language. Features include 
+            vocabulary practice, phrase building exercises, interactive stories with cultural context, 
+            text-to-speech pronunciation, and progress tracking — all wrapped in a modern, 
+            accessible interface.
           </p>
           <div className="technologies">
             <h4>Technologies:</h4>
-            <p>Python, Django, PostgreSQL</p>
+            <p>React, TypeScript, Tailwind CSS, Supabase, Vite, TanStack Query</p>
           </div>
           <div className="project-buttons">
             <button>Github</button>
-            <button>Demo</button>
+            <button><a href='https://ntughari.lovable.app/'>Demo</a></button>
           </div>
         </div>
       </div>
