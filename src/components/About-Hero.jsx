@@ -16,6 +16,7 @@ const AboutHero = ({ isNight }) => {
           <p className="about-hero-title">Software Engineer — Java, Spring Boot, React</p>
           <div className="about-hero-description">
             <p>
+            Current Computer Science student at UWE Bristol <br/>
             I build clean and dependable web applications, blending solid backend engineering with simple, intuitive interfaces. 
             I love making digital tools that feel warm, organized, and genuinely useful.
             </p>

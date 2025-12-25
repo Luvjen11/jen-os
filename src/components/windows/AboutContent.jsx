@@ -20,16 +20,29 @@ const AboutContent = ({ isNight }) => {
                 </p>
             </div>
         </div>
-      
+
+        {/* Education */}
+      <div className="about-goals">
+        <h3>Education</h3>
+        <div className="goal-cards">
+          <div className="goal-card"><b>University of the West of England, Bristol <br/>
+          BSc (Hons) Computer Science <br/>
+          2025 - Expected 2029 <br/></b>
+          <b>Relevant Modules:</b> Principles of programming, Web Development and Databases, Artificial Intelligence, Foundations of Computing 
+          </div>
+        
+        </div>
+      </div>
 
       {/* Goals Section */}
       <div className="about-goals">
         <h3>Goals</h3>
         <div className="goal-cards">
-          <div className="goal-card">Build my startup</div>
-          <div className="goal-card">Learn Igbo and Korean</div>
-          <div className="goal-card">Gym and food</div>
-          <div className="goal-card">Build multiple streams of income</div>
+          <div className="goal-card">Become a founder, content creator and public speaker</div>
+          <div className="goal-card">Invest in my appearance, health, skills and education</div>
+          <div className="goal-card">Build meaningful relationships: God, family and friends</div>
+          <div className="goal-card">Become financially stable: 
+          Build multiple streams of income and get six figures role</div>
         </div>
       </div>
     </div>

@@ -238,3 +238,14 @@ a {
 .project-container.night-mode .project-card:hover {
   box-shadow: 0 6px 15px rgba(132, 204, 232, 0.3);
 }
+
+.project-highlights {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.project-highlights li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}

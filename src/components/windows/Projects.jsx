@@ -40,7 +40,7 @@ const Projects = ({ isNight }) => {
         </div>
       </div>
       <div className="project-card">
-        <img src="/projects-icon.png" alt="Projects Icon" />
+        <img src="/ntughari.png" alt="Projects Icon" />
         <div className="project-details">
           <h3>Ntụgharị - Igbo Language Learning</h3>
           <p>
@@ -55,11 +55,41 @@ const Projects = ({ isNight }) => {
             <p>React, TypeScript, Tailwind CSS, Supabase, Vite, TanStack Query</p>
           </div>
           <div className="project-buttons">
-            <button>Github</button>
-            <button><a href='https://ntughari.lovable.app/'>Demo</a></button>
+            <button><a href='https://ntughari.lovable.app/' target='blank'>Demo</a></button>
           </div>
         </div>
       </div>
+      <div className="project-card">
+  <img src="/selfsaga.png" alt="SelfSaga" />
+  <div className="project-details">
+    <h3>SelfSaga — Backend v1</h3>
+
+    <p>
+      A backend system for a gamified goal-tracking app. I built a REST API with JWT authentication,
+      user profiles, goals, tasks, and an XP + leveling progression engine. Designed with clean
+      service-layer architecture, validation, and API documentation.
+    </p>
+
+    <ul className="project-highlights">
+      <li>JWT auth (register/login) + protected endpoints with Spring Security</li>
+      <li>XP + leveling logic for task/goal completion</li>
+      <li>Swagger/OpenAPI docs + MySQL persistence + JUnit tests</li>
+    </ul>
+
+    <div className="technologies">
+      <h4>Technologies:</h4>
+      <p>Java, Spring Boot, Spring Security (JWT), MySQL, JPA, Swagger (OpenAPI), JUnit</p>
+    </div>
+
+    <div className="project-buttons">
+      <button className="button">
+        <a href="https://github.com/Luvjen11/SelfSaga" target="_blank" rel="noreferrer">
+          Github
+        </a>
+      </button>
+        </div>
+      </div>
+    </div>
       {/* <div className="project-card">
         <img src="/projects-icon.png" alt="Projects Icon" />
         <div className="project-details">
