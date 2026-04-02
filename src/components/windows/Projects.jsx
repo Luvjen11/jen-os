@@ -27,11 +27,12 @@ const Projects = ({ isNight }) => {
         <div className="project-details">
           <h3>Movie Muse</h3>
           <p>
-            MovieMuse lets users add reviews to movies. I can save favorites, add movies and categories, and read reviews from other users.
+            A movie and anime tracking app where users can save favourites, add reviews, and explore content.
+            Recently, I started building a content-based recommendation system to suggest similar movies based on genres and descriptions using TF-IDF and cosine similarity.
           </p>
           <div className="technologies">
             <h4>Technologies:</h4>
-            <p>Java(Spring Boot), React, MySQL</p>
+            <p>Java(Spring Boot), React, MySQL, Python (pandas, scikit-learn)</p>
           </div>
           <div className="project-buttons">
             <button className='button'><a href="https://github.com/Luvjen11/moviemuse" target='blank'>Github</a></button>
